@@ -6,10 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>error</title>
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/htdocs/styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/htdocs/styles/css/main.css">
+    <link rel="icon" href="/htdocs/img/favicon.ico">
 </head>
 <body>
-<h3> Error 404, The page you accessed does not exist, <a href="index.php">go to the main page</a> .</h3>
+
+<?php require 'bloks/header.php'; ?>
+<h4> Error 404, The page you accessed does not exist, <a href="index.php">go to the main page</a> .</h4>
+<?php require 'bloks/footer.php'; ?>
+
 </body>
 </html>
