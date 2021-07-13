@@ -14,7 +14,7 @@ require 'bloks/head.php';
     <div class="row">
         <div class="col-md-8">
             <h3>Registration</h3>
-            <form action="reg/reg.php" method="post">
+            <form action="/htdocs/reg/reg.php" method="post">
                 <label for="username" class="mt-3">Your name</label>
                 <input type="text" name="username" id="username" class="form-control">
 

@@ -18,6 +18,8 @@ if (strlen($username) <= 3) {
 $salt = '@mUkUW42y^nyHUS4nmtR*5?rP-m4r9zj+w8tQZ=kc4y^K5Fd6%dFtpf3PYz%QFr?';
 $encrypted_password = md5($pass . $salt);
 
+
+
 $host = 'host = localhost';
 $port = 'port = 5432';
 $dbname = 'dbname = postgres';
@@ -28,8 +30,8 @@ if (!$db) {
     echo "Error : Nu se poate deschide baza de date\n";
 } else {
     //echo 'The database was successfully opened on : ' . pg_host($db) . "<br/>\n";
-    $result = pg_query($db, "INSERT INTO users(username, email, login, pass) 
-                                                      VALUES ($username, $email, $login, $pass)");
+    $result = pg_query($db, "INSERT INTO users (username, email, login, pass)
+                                                    VALUES ('$username', '$email', '$login', '$pass');");
     if ($result != '') {
         echo "The table was created successfully.\n";
         exit();

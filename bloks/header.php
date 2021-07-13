@@ -4,8 +4,10 @@
     </a>
 
     <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/htdocs/index.php">Home</a>
+        <a class="me-3 text-dark text-decoration-none" href="/htdocs/index.php">Home</a>
     </nav>
+
     <a class="btn btn-outline-primary mt-2 me-2 mb-2" href="#">Logging in</a>
-    <a class="btn btn-outline-primary mt-2 mb-2 me-2" href="/htdocs/reg/reg.php">Registration</a>
+    <a class="btn btn-outline-primary mt-2 mb-2 me-2" href="/htdocs/reg.php">Registration</a>
 </div>
+<?php
