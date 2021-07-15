@@ -14,7 +14,7 @@ require 'bloks/head.php';
     <div class="row">
         <div class="col-md-8">
             <h3>Registration</h3>
-            <form action="/htdocs/reg/reg.php" method="post">
+            <form action="" method="post">
                 <label for="username" class="mt-3">Your name</label>
                 <input type="text" name="username" id="username" class="form-control">
 
@@ -22,12 +22,13 @@ require 'bloks/head.php';
                 <input type="email" name="email" id="email" class="form-control">
 
                 <label for="login" class="mt-3">Your login</label>
-                <input type="text" name="login" id="login " class="form-control">
+                <input type="text" name="login" id="login" class="form-control">
 
                 <label for="pass" class="mt-3">Your password</label>
                 <input type="password" name="pass" id="pass" class="form-control">
 
-                <button type="submit" class="btn btn-success mt-5">Sign up</button>
+                <div class=" mt-3 alert alert-danger" id="errorBlock"></div>
+                <button type="button" id="reg_user" class="btn btn-success mt-3">Sign up</button>
             </form>
         </div>
         <?php require 'bloks/aside.php'; ?>
@@ -35,6 +36,34 @@ require 'bloks/head.php';
 </main>
 
 <?php require 'bloks/footer.php'; ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $('#reg_user').click(function () {
+        var username = $('#username').val();
+        var email = $('#email').val();
+        var login = $('#login').val();
+        var pass = $('#pass').val();
+
+        $.ajax({
+            url: 'reg/reg.php',
+            type: 'POST',
+            cache: false,
+            data: {'username' : username, 'email' : email, 'login' : login, 'pass' : pass},
+            dataType: 'html',
+            success: function (data) {
+                if (data == 'Ready'){
+                    $('#reg_user').text('Ready finished');
+                    $('#errorBlock').hide();
+                } else {
+                    $('#errorBlock').show(); // afisarea eroroii
+                    $('#errorBlock').text(data); //afisarea erorii
+                }
+            }
+        });
+
+    });
+</script>
 
 </body>
 </html>
