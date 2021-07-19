@@ -7,3 +7,23 @@
  #errorBlock {
      display: none;
  }
+
+ .logo {
+     padding-left: 15px !important;
+ }
+
+ .your-style {
+     font-family: 'AmpleSoft Pro';
+     font-weight: 300;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: "AmpleSoft Pro";
+     src: url("/htdocs/styles/AmpleSoftPro/AmpleSoftPro-Light.ttf");
+ }
+
+ .harlow {
+     font-family: "AmpleSoft Pro";
+ }
+

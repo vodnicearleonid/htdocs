@@ -5,4 +5,5 @@
 <title><?= $website_title ?></title>
 <link rel="stylesheet" href="/htdocs/styles/css/bootstrap.min.css">
 <link rel="stylesheet" href="/htdocs/styles/css/main.css">
+<link rel="stylesheet" href="/htdocs/styles/AmpleSoftPro/AmpleSoftPro-Light.ttf">
 <link rel="icon" href="/htdocs/img/favicon.ico">

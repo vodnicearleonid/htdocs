@@ -39,14 +39,16 @@ require 'bloks/head.php';
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script>
+    //primim datele din forma
     $('#reg_user').click(function () {
         var username = $('#username').val();
         var email = $('#email').val();
         var login = $('#login').val();
         var pass = $('#pass').val();
 
+        //ajac query
         $.ajax({
-            url: 'reg/reg.php',
+            url: 'ajax/regAjax.php',
             type: 'POST',
             cache: false,
             data: {'username' : username, 'email' : email, 'login' : login, 'pass' : pass},
